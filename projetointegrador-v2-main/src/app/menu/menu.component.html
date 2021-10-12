@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <div class="mr-5">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <img  src="../../assets/img/PlanetaAgua_5 (1).png" alt="ícone" width="50px" height="50px" class="img-fluid rounded-circle"><img>
+
+        </li>
+        <li>
+          <p  class="m-0 mt-3 font-weight-bold text-center fs-16">MaJu</p>
+        </li>
+      </ul>
+    </div>
+
+      <div class="collapse navbar-collapse ml-5" id="conteudoNavbarSuportado">
+          <ul class="navbar-nav mr-auto ">
+
+              <li class="nav-item active">
+                 <p><a  class="nav-link font-weight-bold text-center" routerLink='/home'>Home <span class="sr-only">(página
+                   atual)</span></a></p>
+              </li>
+              <li class="nav-item">
+                <p><a class="nav-link font-weight-bold text-center"   [routerLink]="['/minhas-postagens']">Meus Posts</a></p>
+              </li>
+              <li class="nav-item">
+                <p><a class="nav-link font-weight-bold text-center"
+                  data-toggle="modal" data-target="#ExemploModalCentralizado" >Temas</a></p>
+              </li>
+              <li class="nav-item">
+                <p><a class="nav-link font-weight-bold text-center"   [routerLink]="['/uteis']">Informações Uteis</a></p>
+              </li>
+
+          </ul>
+   </div>
+      <div>
+          <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Pesquisa de Temas" (input)='pegarTema($event)'>
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)='pesquisarTema()'>Pesquisar</button>
+          </form>
+     </div>
+</nav>
+
+<app-modal-tema></app-modal-tema>

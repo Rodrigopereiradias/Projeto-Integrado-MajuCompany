@@ -1,0 +1,191 @@
+<div class="container-fluid gedf-wrapper">
+  <div class="row">
+      <div class="col-md-3 ">
+          <div class="card">
+              <div class="card-body d-flex justify-content-center">
+                <img  src="{{foto}}" alt="imagem do user" width="100px" height="100px" class="img-fluid rounded-circle"><img>
+              </div>
+              <ul class="list-group list-group-flush">
+                <p  class="m-0 text-uppercase font-weight-bold text-center fs-16">{{nome}}</p>
+                <a [routerLink]="['/user-edit', id]"><p class="text-dark m-0 text-uppercase  text-center fs-10 m-0"> Trocar de usuario</p></a>
+                  <li class="list-group-item">
+                    <a   [routerLink]="['/minhas-postagens']" ><p class="text-dark m-0 text-uppercase  text-center fs-10 m-0">Minhas Postagens</p></a>
+                  </li>
+                  <li class="list-group-item">
+                    <a  href="#" (click)='sair()'><p class="text-danger m-0 text-uppercase  text-center fs-10 m-0">Sair</p></a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div class="col-md-6 gedf-main">
+
+          <!-- \\\\\\\Post-->
+          <div class="card gedf-card">
+              <div class="card-header">
+                  <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                      <li class="nav-item">
+                          <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true">Faça sua publicação</a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="card-body">
+                  <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
+                        <div class="form-goup">
+                          <label for="titulo">Título</label>
+                          <input [(ngModel)]="postagem.titulo" type="text" class="form-control" id="titulo" placeholder="Digite o titulo">
+                        </div>
+
+                        <div class="form-goup mt-3">
+                          <label for="titulo">Texto</label>
+                          <textarea [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-goup mt-3 mb-3">
+                          <label for="titulo">Escolha um tema</label>
+                          <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                            <option *ngFor='let tema of listaTemas' value="{{tema.id}}">{{tema.descricao}}</option>
+                          </select>
+                        </div>
+
+                      </div>
+                  </div>
+                  <div class="btn-toolbar justify-content-between">
+                      <div class="btn-group">
+                          <button type="submit" (click)='publicar()' class="btn btn-success mr-2">Compartilhar</button>
+                      </div>
+                      <div class="btn-group">
+                          <button id="btnGroupDrop1" type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                              aria-expanded="false">
+                              <i class="fa fa-globe"></i>
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
+                              <a class="dropdown-item" ><i class="fa fa-globe"></i> Público</a>
+                              <a class="dropdown-item" ><i class="fa fa-users"></i> Amigos</a>
+                              <a class="dropdown-item" ><i class="fa fa-user"></i> Somente eu</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- Post /////-->
+
+          <!--- \\\\\\\Post-->
+          <div *ngIf='temaOk == false'>
+            <div class="card gedf-card"
+          *ngFor='let item of listaPostagens | orderBy : key : reverse'>
+              <div class="card-header">
+                  <div class="d-flex justify-content-between align-items-center">
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div class="mr-2">
+                              <img class="rounded-circle" width="45" src="{{item.usuario.foto}}" alt=" MaJu company">
+                          </div>
+                          <div class="ml-2" >
+                              <div class="h5 m-0"><p>@ {{item.usuario.nome}}</p> </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-center mt-2">
+                  <a class="card-link">
+                    <h5 class=" text-center card-title">{{item.titulo}}</h5>
+                </a>
+                </div>
+                <div class="d-flex justify-content-center mt-2">
+                  <div class="col-md-6">
+                    <p class="card-text text-center mb-2 mt-2">{{item.texto}} </p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end mt-2">
+                  <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i> <p class="card-text">
+                    <small class="text-muted">
+                    {{item.data| date: 'dd/MM/yyyy'}} às {{item.data| date: 'HH:mm'}} Tema: {{item.tema.descricao}} </small></p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                  <a class="card-link"><i class="fa fa-gittip"></i> Like</a>
+                  <a class="card-link"><i class="fa fa-comment"></i> Comente</a>
+                  <a class="card-link"><i class="fa fa-mail-forward"></i> Compartilhar</a>
+              </div>
+          </div>
+          </div>
+
+          <!-- Post /////-->
+
+          <!-- post por tema -->
+          <div *ngIf='temaOk'>
+            <div *ngFor='let tema of listaTemas'>
+              <div class="card gedf-card"
+            *ngFor='let item of tema.postagem | orderBy : key : reverse'>
+                <div class="card-header">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="mr-2">
+                                <img class="rounded-circle" width="45" src="{{item.usuario.foto}}" alt=" MaJu company">
+                            </div>
+                            <div class="ml-2" >
+                                <div class="h5 m-0"><p>@ {{item.usuario.nome}}</p> </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-body">
+                    <a class="card-link">
+                        <h5 class=" text-center card-title">{{item.titulo}}</h5>
+                    </a>
+                    <div class="d-flex justify-content-center">
+                      <div class="col-md-6">
+                        <p class="card-text text-center mb-2 mt-2">{{item.texto}} </p>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                      <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i> <p class="card-text">
+                        <small class="text-muted">
+                        {{item.data| date: 'dd/MM/yyyy'}} às {{item.data| date: 'HH:mm'}} Tema: {{tema.descricao}} </small></p>
+                      </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a class="card-link"><i class="fa fa-gittip"></i> Like</a>
+                    <a class="card-link"><i class="fa fa-comment"></i> Comente</a>
+                    <a class="card-link"><i class="fa fa-mail-forward"></i> Compartilhar</a>
+                </div>
+            </div>
+            </div>
+          </div>
+
+
+          <!-- Post por tema -->
+
+      </div>
+      <div class="col-md-3">
+          <div class="card gedf-card">
+              <div class="card-body">
+                  <h5 class="card-title" style="color: #00842B">Entenda a importância</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Greenpeace Oceanos</h6>
+                  <p class="card-text">Aprenda um pouco sobre a importância dos mares com o Greenpeace, um grande amante do mar.</p>
+                  <a href="https://www.greenpeace.org/brasil/tag/oceanos/" target="_blank" class="card-link">https://www.greenpeace.org/brasil/tag/oceanos/</a>
+
+              </div>
+          </div>
+          <div class="card gedf-card">
+                  <div class="card-body">
+                      <h5 class="card-title" style="color: #00842B">Faça uma doação</h5>
+                      <h6 class="card-subtitle mb-2 text-muted" >Greenpeace Oceanos</h6>
+                      <p class="card-text">O Greenpeace está realizando uma campanha para salvar os oceanos, e você pode ajudar com um pouco do seu dinheiro, mesmo que seja um pouco já sera de grande ajuda.</p>
+                      <a href="https://doe.greenpeace.org.br/proteja-os-oceanos/p?appeal=18409&donationType=Monthly&utm_term=greenpeace%20oceanos&utm_campaign=&utm_source=google&utm_medium=cpc&hsa_acc=3659611372&hsa_cam=11036425641&hsa_grp=111218385547&hsa_ad=509337470822&hsa_src=g&hsa_tgt=kwd-822391991205&hsa_kw=greenpeace%20oceanos&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjwk4yGBhDQARIsACGfAeujTwF80tha6DXy17GnIV3y6umKTFXg7NQnHW93Aq929R3AZ0ohneIaAmp0EALw_wcB" target="_blank" class="card-link">https://doe.greenpeace.org.br</a>
+
+                  </div>
+              </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+

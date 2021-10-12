@@ -1,0 +1,56 @@
+
+  <div class="container-fluid  gradient ">
+    <div class="row">
+
+        <div class="col-md-6 mt-5 mb-5">
+            <div class="row  d-flex justify-content-center">
+                <div class="col-md-10">
+                <h1 class="text-center "  style="color: #00842B" >Cadastro</h1>
+
+                    <label for="nome"  style="color: #00842B">Nome</label>
+                    <input [(ngModel)]='user.nome' class="form-control " type="text" name="nome" id="nome" placeholder="Seu nome">
+
+                <div class="form-group">
+                    <label for="email" style="color: #00842B">E-mail</label>
+                    <input [(ngModel)]='user.usuario' class="form-control " type="text" name="email" id="email" placeholder="Seu E-mail">
+                </div>
+
+                <div class="form-group">
+                    <label for="foto cor"  style="color: #00842B">Link da foto</label>
+                    <input [(ngModel)]='user.foto' class="form-control " type="text" name="foto" id="foto" placeholder="Link da sua foto">
+                </div>
+
+                <div class="form-group">
+                    <label for="senha cor"  style="color: #00842B">senha</label>
+                    <input (input)='confirmeSenha($event)' class="form-control " type="password" name="senha" id="senha" placeholder="Sua senha">
+                </div>
+
+                <div class="form-group">
+                    <label for="confimSenha cor"  style="color: #00842B">Confime sua senha </label>
+                    <input [(ngModel)]='user.senha' class="form-control " type="password" name="confimSenha" id="confimSenha" placeholder="Confime sua senha">
+                </div>
+                <div class="form-group">
+                    <label for="tipo cor" style="color: #00842B">Tipo de Usuario </label>
+                   <select  class="form-control"  name="tipo" id="tipo" (change)='tipoUser($event)'>
+                       <option >Selecione um tipo de usuario</option>
+                       <option  value="Normal">Normal</option>
+                       <option  value="Admin">Administrador</option>
+                   </select>
+                </div>
+                <div class=" d-flex justify-content-center">
+                    <button type="submit" routerLink='/inicio' class="btn btn-danger mr-4">Cancelar</button>
+                    <button type="submit" class="btn btn-success" (click)="cadastrarFinal()">Cadastrar</button>
+                </div>
+             </div>
+            </div>
+
+        </div>
+        <div class="col-md-6" id='img-bg'>
+
+        </div>
+    </div>
+  </div>
+
+
+
+

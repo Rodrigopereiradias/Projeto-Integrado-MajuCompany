@@ -1,0 +1,1043 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>projeto-integrador-v2 documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">projeto-integrador-v2 documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>MenuComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/menu/menu.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-menu</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./menu.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./menu.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#foto">foto</a>
+                            </li>
+                            <li>
+                                <a href="#id">id</a>
+                            </li>
+                            <li>
+                                <a href="#listaTema">listaTema</a>
+                            </li>
+                            <li>
+                                <a href="#nome">nome</a>
+                            </li>
+                            <li>
+                                <a href="#tema">tema</a>
+                            </li>
+                            <li>
+                                <a href="#tituloPost">tituloPost</a>
+                            </li>
+                            <li>
+                                <a href="#tituloTema">tituloTema</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cadastrar">cadastrar</a>
+                            </li>
+                            <li>
+                                <a href="#findAllTema">findAllTema</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#pegarTema">pegarTema</a>
+                            </li>
+                            <li>
+                                <a href="#pesquisarTema">pesquisarTema</a>
+                            </li>
+                            <li>
+                                <a href="#sair">sair</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, postagemService: <a href="../injectables/PostagemService.html">PostagemService</a>, temaService: <a href="../injectables/TemaService.html">TemaService</a>, authService: <a href="../injectables/AuthService.html">AuthService</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/menu/menu.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>postagemService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PostagemService.html" target="_self" >PostagemService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>temaService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TemaService.html" target="_self" >TemaService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cadastrar"></a>
+                    <span class="name">
+                        <b>
+                            cadastrar
+                        </b>
+                        <a href="#cadastrar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cadastrar()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="63"
+                            class="link-to-prism">src/app/menu/menu.component.ts:63</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="findAllTema"></a>
+                    <span class="name">
+                        <b>
+                            findAllTema
+                        </b>
+                        <a href="#findAllTema"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>findAllTema()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/menu/menu.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/app/menu/menu.component.ts:37</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pegarTema"></a>
+                    <span class="name">
+                        <b>
+                            pegarTema
+                        </b>
+                        <a href="#pegarTema"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>pegarTema(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">src/app/menu/menu.component.ts:76</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pesquisarTema"></a>
+                    <span class="name">
+                        <b>
+                            pesquisarTema
+                        </b>
+                        <a href="#pesquisarTema"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>pesquisarTema()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/app/menu/menu.component.ts:72</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sair"></a>
+                    <span class="name">
+                        <b>
+                            sair
+                        </b>
+                        <a href="#sair"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>sair()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">src/app/menu/menu.component.ts:49</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="foto"></a>
+                        <span class="name">
+                            <b>
+                            foto</b>
+                            <a href="#foto"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>environment.foto</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/menu/menu.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="id"></a>
+                        <span class="name">
+                            <b>
+                            id</b>
+                            <a href="#id"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>environment.id</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/menu/menu.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listaTema"></a>
+                        <span class="name">
+                            <b>
+                            listaTema</b>
+                            <a href="#listaTema"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Tema.html" target="_self" >Tema[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/menu/menu.component.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="nome"></a>
+                        <span class="name">
+                            <b>
+                            nome</b>
+                            <a href="#nome"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>environment.nome</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/menu/menu.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tema"></a>
+                        <span class="name">
+                            <b>
+                            tema</b>
+                            <a href="#tema"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Tema.html" target="_self" >Tema</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Tema</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/menu/menu.component.ts:25</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tituloPost"></a>
+                        <span class="name">
+                            <b>
+                            tituloPost</b>
+                            <a href="#tituloPost"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/menu/menu.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tituloTema"></a>
+                        <span class="name">
+                            <b>
+                            tituloTema</b>
+                            <a href="#tituloTema"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/menu/menu.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { PostagemService } from &#x27;./../service/postagem.service&#x27;;
+import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import { environment } from &#x27;src/environments/environment.prod&#x27;;
+import { Tema } from &#x27;../model/Tema&#x27;;
+import { AuthService } from &#x27;../service/auth.service&#x27;;
+import { TemaService } from &#x27;../service/tema.service&#x27;;
+
+@Component({
+  selector: &#x27;app-menu&#x27;,
+  templateUrl: &#x27;./menu.component.html&#x27;,
+  styleUrls: [&#x27;./menu.component.css&#x27;]
+})
+export class MenuComponent implements OnInit {
+
+   nome &#x3D; environment.nome
+   foto &#x3D; environment.foto
+   id &#x3D; environment.id
+   tituloPost: string
+   tituloTema: string
+
+  /* tema */
+
+  listaTema: Tema[]
+  tema: Tema &#x3D; new Tema
+
+
+
+  constructor(
+    private router : Router,
+    private postagemService: PostagemService,
+    private temaService: TemaService,
+    private authService: AuthService,
+    private route: ActivatedRoute
+  ) { }
+
+  ngOnInit(
+
+
+
+  ) {
+
+
+    /*tema */
+
+    this.findAllTema()
+  }
+
+  sair(){
+    this.router.navigate([&#x27;/entrar&#x27;])
+    environment.token &#x3D; &#x27;&#x27;
+    environment.nome &#x3D; &#x27;&#x27;
+    environment.id &#x3D; 0
+    environment.foto &#x3D; &#x27;&#x27;
+  }
+
+  /* tema*/
+  findAllTema(){
+    this.temaService.getAllTema().subscribe((resp: Tema[]) &#x3D;&gt;{
+      this.listaTema &#x3D; resp
+    })
+  }
+  cadastrar(){
+    this.temaService.postTema(this.tema).subscribe((resp: Tema) &#x3D;&gt;{
+      this.tema &#x3D; resp
+      alert(&#x27;tema cadastrado com sucesso!&#x27;)
+      this.findAllTema()
+      this.tema &#x3D; new Tema()
+    })
+  }
+
+  pesquisarTema() {
+    localStorage.setItem(&#x27;tituloTema&#x27;, this.tituloTema)
+  }
+
+  pegarTema(event: any) {
+    this.tituloTema &#x3D; event.target.value
+  }
+}
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;nav class&#x3D;&quot;navbar navbar-expand-lg navbar-light bg-light&quot;&gt;
+
+    &lt;div class&#x3D;&quot;mr-5&quot;&gt;
+      &lt;ul class&#x3D;&quot;navbar-nav mr-auto&quot;&gt;
+        &lt;li class&#x3D;&quot;nav-item active&quot;&gt;
+          &lt;img  src&#x3D;&quot;../../assets/img/PlanetaAgua_5 (1).png&quot; alt&#x3D;&quot;ícone&quot; width&#x3D;&quot;50px&quot; height&#x3D;&quot;50px&quot; class&#x3D;&quot;img-fluid rounded-circle&quot;&gt;&lt;img&gt;
+
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;p  class&#x3D;&quot;m-0 mt-3 font-weight-bold text-center fs-16&quot;&gt;MaJu&lt;/p&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;collapse navbar-collapse ml-5&quot; id&#x3D;&quot;conteudoNavbarSuportado&quot;&gt;
+          &lt;ul class&#x3D;&quot;navbar-nav mr-auto &quot;&gt;
+
+              &lt;li class&#x3D;&quot;nav-item active&quot;&gt;
+                 &lt;p&gt;&lt;a  class&#x3D;&quot;nav-link font-weight-bold text-center&quot; routerLink&#x3D;&#x27;/home&#x27;&gt;Home &lt;span class&#x3D;&quot;sr-only&quot;&gt;(página
+                   atual)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+              &lt;/li&gt;
+              &lt;li class&#x3D;&quot;nav-item&quot;&gt;
+                &lt;p&gt;&lt;a class&#x3D;&quot;nav-link font-weight-bold text-center&quot;   [routerLink]&#x3D;&quot;[&#x27;/minhas-postagens&#x27;]&quot;&gt;Meus Posts&lt;/a&gt;&lt;/p&gt;
+              &lt;/li&gt;
+              &lt;li class&#x3D;&quot;nav-item&quot;&gt;
+                &lt;p&gt;&lt;a class&#x3D;&quot;nav-link font-weight-bold text-center&quot;
+                  data-toggle&#x3D;&quot;modal&quot; data-target&#x3D;&quot;#ExemploModalCentralizado&quot; &gt;Temas&lt;/a&gt;&lt;/p&gt;
+              &lt;/li&gt;
+              &lt;li class&#x3D;&quot;nav-item&quot;&gt;
+                &lt;p&gt;&lt;a class&#x3D;&quot;nav-link font-weight-bold text-center&quot;   [routerLink]&#x3D;&quot;[&#x27;/uteis&#x27;]&quot;&gt;Informações Uteis&lt;/a&gt;&lt;/p&gt;
+              &lt;/li&gt;
+
+          &lt;/ul&gt;
+   &lt;/div&gt;
+      &lt;div&gt;
+          &lt;form class&#x3D;&quot;form-inline my-2 my-lg-0&quot;&gt;
+              &lt;input class&#x3D;&quot;form-control mr-sm-2&quot; type&#x3D;&quot;search&quot; placeholder&#x3D;&quot;Pesquisar&quot; (input)&#x3D;&#x27;pegarTema($event)&#x27;&gt;
+              &lt;button class&#x3D;&quot;btn btn-outline-success my-2 my-sm-0&quot; type&#x3D;&quot;submit&quot; (click)&#x3D;&#x27;pesquisarTema()&#x27;&gt;Pesquisar&lt;/button&gt;
+          &lt;/form&gt;
+     &lt;/div&gt;
+&lt;/nav&gt;
+
+
+&lt;!-- Modal --&gt;
+&lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;ExemploModalCentralizado&quot; tabindex&#x3D;&quot;-1&quot; role&#x3D;&quot;dialog&quot; aria-labelledby&#x3D;&quot;TituloModalCentralizado&quot; aria-hidden&#x3D;&quot;true&quot;&gt;
+  &lt;div class&#x3D;&quot;modal-dialog modal-dialog-centered&quot; role&#x3D;&quot;document&quot;&gt;
+    &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+      &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+        &lt;h5 class&#x3D;&quot;modal-title &quot; id&#x3D;&quot;TituloModalCentralizado&quot;&gt;Temas&lt;/h5&gt;
+
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;close&quot; data-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Fechar&quot;&gt;
+          &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+        &lt;input  [(ngModel)]&#x3D;&#x27;tema.descricao&#x27; type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; id&#x3D;&quot;descricao&quot; placeholder&#x3D;&quot;Ditigite a descricao do tema&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+        &lt;table class&#x3D;&quot;table table-hover&quot;&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;&lt;p&gt;#&lt;/p&gt;&lt;/th&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;&lt;p&gt; Descrição&lt;/p&gt;&lt;/th&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;&lt;p class&#x3D;&quot;text-center&quot; &gt;Modificações&lt;/p&gt; &lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr *ngFor&#x3D;&quot;let tema of listaTema&quot;&gt;
+              &lt;th scope&#x3D;&quot;row&quot;&gt;{{tema.id}}&lt;/th&gt;
+              &lt;td &gt;{{tema.descricao}}&lt;/td&gt;
+              &lt;td class&#x3D;&quot;d-flex justify-content-center &quot;&gt;
+                &lt;button class&#x3D;&quot;btn btn-info mr-3&quot; data-dismiss&#x3D;&quot;modal&quot; [routerLink]&#x3D;&quot;[&#x27;/tema-edit&#x27;, tema.id]&quot;&gt;Editar&lt;/button&gt;
+                &lt;button class&#x3D;&quot;btn btn-danger&quot;  data-dismiss&#x3D;&quot;modal&quot; [routerLink]&#x3D;&quot;[&#x27;/tema-delete&#x27;, tema.id]&quot;&gt;Apagar&lt;/button&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-secondary&quot; data-dismiss&#x3D;&quot;modal&quot;&gt;Fechar&lt;/button&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary&quot; (click)&#x3D;&#x27;cadastrar()&#x27; &gt;Salvar mudanças&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./menu.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><nav class="navbar navbar-expand-lg navbar-light bg-light">    <div class="mr-5">      <ul class="navbar-nav mr-auto">        <li class="nav-item active">          <img  src="../../assets/img/PlanetaAgua_5 (1).png" alt="ícone" width="50px" height="50px" class="img-fluid rounded-circle"><img>        </li>        <li>          <p  class="m-0 mt-3 font-weight-bold text-center fs-16">MaJu</p>        </li>      </ul>    </div>      <div class="collapse navbar-collapse ml-5" id="conteudoNavbarSuportado">          <ul class="navbar-nav mr-auto ">              <li class="nav-item active">                 <p><a  class="nav-link font-weight-bold text-center" routerLink=\'/home\'>Home <span class="sr-only">(página                   atual)</span></a></p>              </li>              <li class="nav-item">                <p><a class="nav-link font-weight-bold text-center"   [routerLink]="[\'/minhas-postagens\']">Meus Posts</a></p>              </li>              <li class="nav-item">                <p><a class="nav-link font-weight-bold text-center"                  data-toggle="modal" data-target="#ExemploModalCentralizado" >Temas</a></p>              </li>              <li class="nav-item">                <p><a class="nav-link font-weight-bold text-center"   [routerLink]="[\'/uteis\']">Informações Uteis</a></p>              </li>          </ul>   </div>      <div>          <form class="form-inline my-2 my-lg-0">              <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" (input)=\'pegarTema($event)\'>              <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)=\'pesquisarTema()\'>Pesquisar</button>          </form>     </div></nav><!-- Modal --><div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">  <div class="modal-dialog modal-dialog-centered" role="document">    <div class="modal-content">      <div class="modal-header">        <h5 class="modal-title " id="TituloModalCentralizado">Temas</h5>        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">          <span aria-hidden="true">&times;</span>        </button>      </div>      <div class="modal-body">        <input  [(ngModel)]=\'tema.descricao\' type="text" class="form-control" id="descricao" placeholder="Ditigite a descricao do tema">      </div>      <div class="modal-body">        <table class="table table-hover">          <thead>            <tr>              <th scope="col"><p>#</p></th>              <th scope="col"><p> Descrição</p></th>              <th scope="col"><p class="text-center" >Modificações</p> </th>            </tr>          </thead>          <tbody>            <tr *ngFor="let tema of listaTema">              <th scope="row">{{tema.id}}</th>              <td >{{tema.descricao}}</td>              <td class="d-flex justify-content-center ">                <button class="btn btn-info mr-3" data-dismiss="modal" [routerLink]="[\'/tema-edit\', tema.id]">Editar</button>                <button class="btn btn-danger"  data-dismiss="modal" [routerLink]="[\'/tema-delete\', tema.id]">Apagar</button>              </td>            </tr>          </tbody>        </table>      </div>      <div class="modal-footer">        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>        <button type="button" class="btn btn-primary" (click)=\'cadastrar()\' >Salvar mudanças</button>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CadastrarComponent', 'selector': 'app-cadastrar'},{'name': 'ContatoComponent', 'selector': 'app-contato'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'MinhasPostagensComponent', 'selector': 'app-minhas-postagens'},{'name': 'PostagemComponent', 'selector': 'app-postagem'},{'name': 'PostagemDeleteComponent', 'selector': 'app-postagem-delete'},{'name': 'PostagemEditComponent', 'selector': 'app-postagem-edit'},{'name': 'RodapeComponent', 'selector': 'app-rodape'},{'name': 'SobreNosComponent', 'selector': 'app-sobre-nos'},{'name': 'TemaComponent', 'selector': 'app-tema'},{'name': 'TemaDeleteComponent', 'selector': 'app-tema-delete'},{'name': 'TemaEditComponent', 'selector': 'app-tema-edit'},{'name': 'UserEditComponent', 'selector': 'app-user-edit'},{'name': 'UteisComponent', 'selector': 'app-uteis'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'MenuComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'MenuComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

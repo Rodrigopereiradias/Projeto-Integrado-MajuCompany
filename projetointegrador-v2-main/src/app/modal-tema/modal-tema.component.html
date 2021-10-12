@@ -1,0 +1,43 @@
+<!-- Modal -->
+<div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title " id="TituloModalCentralizado">Temas</h5>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input  [(ngModel)]='tema.descricao' type="text" class="form-control" id="descricao" placeholder="Digite a descricao do tema">
+        <div class='mt-3 d-flex justify-content-center'>
+          <button type="button" class="btn btn-danger mr-3" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal" (click)='cadastrar()'>Salvar mudanças</button>
+        </div>
+
+      </div>
+      <div class="modal-body">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col"><p>#</p></th>
+              <th scope="col"><p> Descrição</p></th>
+              <th scope="col"><p class="text-center" >Modificações</p> </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let tema of listaTema">
+              <th scope="row">{{tema.id}}</th>
+              <td >{{tema.descricao}}</td>
+              <td class="d-flex justify-content-center ">
+                <button class="btn btn-success mr-3" data-dismiss="modal" [routerLink]="['/tema-edit', tema.id]">Editar</button>
+                <button class="btn btn-danger"  data-dismiss="modal" [routerLink]="['/tema-delete', tema.id]">Apagar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

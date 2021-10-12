@@ -1,0 +1,74 @@
+.ml-3
+{
+  height: 150px;
+  width: 150px;
+}
+.gradient2:hover{
+
+    /* Colors generated on: https://colorhunt.co/palette/179481 */
+    background: linear-gradient(45deg, #d8e3e7, #51c4d3, #126e82, #588ff3,#132c33);
+    background-size: 300% 300%;
+    animation: colors 10s ease infinite;
+
+
+  @keyframes colors {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+}
+.gradient3:hover{
+
+  /* Colors generated on: https://colorhunt.co/palette/179481 */
+  background: linear-gradient(45deg, #E9FFF8, #77acf1, #3edbf0, #c0fefc,#04009a);
+  background-size: 300% 300%;
+  animation: colors 10s ease infinite;
+
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+}
+
+.fa{
+
+  font-size: 20pt;
+  color: black;
+  padding: 10px;
+  }
+  .fa-github:hover{
+   color: #54BF63;
+  }
+  .fa-instagram:hover{
+      color: #54BF63;
+  }
+  .fa-linkedin:hover{
+      color: #54BF63;
+  }
+  ul.social-network{
+    list-style: nome;
+    padding: 0;
+}
+ul.social-network li{
+    display: inline;
+    margin: 0;
+    margin: 5px;
+}

@@ -1,0 +1,88 @@
+
+  <div class="container-fluid gradient">
+
+    <div class="row d-flex align-items-center">
+
+        <div class="col-md-6">
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <h1 class="text-center mb-3 font-weight-bold" style="color: #00842B">Login</h1>
+
+                    <p class="text-center">
+                        Não tem cadastro?  <a  routerLink='/cadastrar'>Cadastre-se</a>
+                    </p>
+
+                    <div class="form-group">
+                      <label for="senha"></label>
+                        <input [(ngModel)]="userLogin.usuario"  class="form-control" type="text" name="username" id="username" placeholder="Usuário" >
+                    </div>
+
+                    <div class="form-group">
+
+                        <input [(ngModel)]="userLogin.senha"  class="form-control" type="password" name="password" id="password" placeholder="Senha">
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="gridCheck">
+                          <label class="form-check-label" for="gridCheck" font-weight-bold style="color: #00842B">
+                            Mantenha-me conectado
+                          </label>
+                        </div>
+                      </div>
+                      <br>
+
+                    <div class="d-flex justify-content-center">
+                      <button type="submit" class="btn btn-success" (click)='entrar()' >Entrar</button>
+                    </div>
+                    <br>
+                    <p class="text-center font-weight-bold" style="color: #00842B" >
+                        Faça login com:
+                    </p>
+                    <div class="row">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <ul class="social-sign">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank" class="icoFacebook">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.google.com/intl/pt-BR/account/about/" target="_blank" class="icoGitHub">
+                                        <i class="fa fa-google" aria-hidden="true"></i>
+
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.linkedin.com/" target="_blank" class="icoInstagram">
+                                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <hr class="mt-5 mb-5">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="col-md-5" id="img-bg"></div>
+
+
+
+    </div>
+  </div>
+
+
+
+

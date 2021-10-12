@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+.gradient {
+  /* Colors generated on: https://colorhunt.co/palette/179481 */
+  background: linear-gradient(45deg, #53bdd6, #3c8f99, #6177db, #ebe0d0,#cdc2b6);
+  background-size: 500% 500%;
+  animation: colors 10s ease infinite;
+}
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.fs-100{
+  font-size: 100pt;
+}
+
+.fs-54{
+  font-size: 54pt;
+}
+
+.fs-16{
+  font-size: 16pt;
+}
+.fs-18{
+  font-size: 18pt;
+}
+.fs-10{
+  font-size: 10pt;
+}
+
+
+
+
+.gradient2 {
+  /* Colors generated on: https://colorhunt.co/palette/179481 */
+  background: linear-gradient(#5174e6, #5ec3f2,#6177db,#203385,#030b31 );
+
+  background-size: 500% 500%;
+
+}
